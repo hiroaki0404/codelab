@@ -14,6 +14,10 @@
 		}
 	},
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+	// for Windows
+	"mounts": ["source=${localEnv:Home}/AppData/Roaming/gcloud,target=/home/vscode/.config/gcloud,type=bind,consistency=cached"],
+	// for Mac
+//	"mounts": ["source=${localEnv:Home}/.config/gcloud,target=/home/vscode/.config/gcloud,type=bind,consistency=cached"],
 
 	// Configure tool-specific properties.
 	"customizations": {
